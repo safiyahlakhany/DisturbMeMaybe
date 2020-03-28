@@ -13,6 +13,7 @@
 		A7D14D6B242F4041004E7FF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D14D69242F4041004E7FF3 /* Main.storyboard */; };
 		A7D14D6D242F404A004E7FF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D14D6C242F404A004E7FF3 /* Assets.xcassets */; };
 		A7D14D70242F404A004E7FF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D14D6E242F404A004E7FF3 /* LaunchScreen.storyboard */; };
+		A7D14D79242F43F8004E7FF3 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D14D78242F43F8004E7FF3 /* AuthenticationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A7D14D6C242F404A004E7FF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7D14D6F242F404A004E7FF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7D14D71242F404A004E7FF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7D14D78242F43F8004E7FF3 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		A7D14D62242F4041004E7FF3 /* DisturbMeMaybe */ = {
 			isa = PBXGroup;
 			children = (
+				A7D14D77242F4393004E7FF3 /* ViewControllers */,
 				A7D14D63242F4041004E7FF3 /* AppDelegate.swift */,
 				A7D14D65242F4041004E7FF3 /* SceneDelegate.swift */,
 				A7D14D67242F4041004E7FF3 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				A7D14D71242F404A004E7FF3 /* Info.plist */,
 			);
 			path = DisturbMeMaybe;
+			sourceTree = "<group>";
+		};
+		A7D14D77242F4393004E7FF3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A7D14D78242F43F8004E7FF3 /* AuthenticationViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D14D79242F43F8004E7FF3 /* AuthenticationViewController.swift in Sources */,
 				A7D14D68242F4041004E7FF3 /* ViewController.swift in Sources */,
 				A7D14D64242F4041004E7FF3 /* AppDelegate.swift in Sources */,
 				A7D14D66242F4041004E7FF3 /* SceneDelegate.swift in Sources */,
