@@ -10,6 +10,13 @@ import UIKit
 
 class StatusTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var availabilityImage: UIImageView!
+    
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

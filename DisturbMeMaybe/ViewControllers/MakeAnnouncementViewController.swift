@@ -10,10 +10,26 @@ import UIKit
 
 class MakeAnnouncementViewController: UIViewController {
 
+    
+    @IBOutlet weak var announcementTextField: UITextField!
+    
+    @IBOutlet weak var descriptionTextField: UITextView!
+    
+    @IBOutlet weak var submitButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func submitPressed(_ sender: Any) {
+        // store responses in database
+        
+        // collapse page
+        
     }
     
 
