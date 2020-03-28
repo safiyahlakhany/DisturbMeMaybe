@@ -1,5 +1,5 @@
 //
-//  InviteOrJoinViewController.swift
+//  MakeAnnouncementViewController.swift
 //  DisturbMeMaybe
 //
 //  Created by Safiyah Lakhany on 3/28/20.
@@ -7,27 +7,14 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth
 
-class InviteOrJoinViewController: UIViewController {
+class MakeAnnouncementViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    
-    @IBAction func createPressed(_ sender: Any) {
-        
-    }
-    
-    
-    @IBAction func joinPressed(_ sender: Any) {
-        print(Firebase.Auth.auth().currentUser?.uid)
-    }
-    
     
 
     /*

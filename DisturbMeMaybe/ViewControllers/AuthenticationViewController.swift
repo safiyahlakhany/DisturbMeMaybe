@@ -86,11 +86,10 @@ class AuthenticationViewController: UIViewController {
                             self.showError("Error saving user data.")
                         }
                 }
-                    
+                    // Transition to the home screen
+                    self.transitionToInvOrJoin()
                 }
             }
-            // Transition to the home screen
-            self.transitionToMain()
             
         }
         
@@ -154,6 +153,11 @@ class AuthenticationViewController: UIViewController {
         let mainViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.mainViewController) as? MainViewController
         view.window?.rootViewController = mainViewController
         view.window?.makeKeyAndVisible()
+    }
+    
+    func transitionToInvOrJoin()
+    {
+        self.performSegue(withIdentifier: "AfterSignUp", sender: self)
     }
 
 }

@@ -1,5 +1,5 @@
 //
-//  InviteViewController.swift
+//  AnnouncementViewController.swift
 //  DisturbMeMaybe
 //
 //  Created by Safiyah Lakhany on 3/28/20.
@@ -8,32 +8,30 @@
 
 import UIKit
 
-class InviteViewController: UIViewController {
+class AnnouncementViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+{
+    
+    
+    @IBOutlet var tableView: UITableView!
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "AnnouncementCell")!
+        return cell
+    }
+    
 
-    
-    @IBOutlet weak var numberTextField: UITextField!
-    
-    @IBOutlet weak var enterButton: UIButton!
-    
-    
-    @IBOutlet weak var numberLabel: UILabel!
-    
-    @IBOutlet weak var nextButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func enterPressed(_ sender: Any) {
-    }
-    
-    
-    @IBAction func nextPressed(_ sender: Any) {
-    }
-    
+
     /*
     // MARK: - Navigation
 

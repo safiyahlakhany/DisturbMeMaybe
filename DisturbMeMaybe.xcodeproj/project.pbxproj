@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		A77590E7242F7168000E9280 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77590E6242F7168000E9280 /* Constants.swift */; };
 		A77590E9242F72BF000E9280 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77590E8242F72BF000E9280 /* MainViewController.swift */; };
+		A77590ED242FE492000E9280 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77590EC242FE492000E9280 /* StatusViewController.swift */; };
+		A77590EF242FE4FA000E9280 /* AnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77590EE242FE4FA000E9280 /* AnnouncementViewController.swift */; };
+		A77590F1242FE54C000E9280 /* MakeAnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77590F0242FE54C000E9280 /* MakeAnnouncementViewController.swift */; };
+		A77590F3242FE580000E9280 /* UpdateStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77590F2242FE580000E9280 /* UpdateStatusViewController.swift */; };
+		A77590F5242FEE6C000E9280 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77590F4242FEE6C000E9280 /* StatusTableViewCell.swift */; };
+		A77590F7242FEEA1000E9280 /* AnnouncementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77590F6242FEEA1000E9280 /* AnnouncementTableViewCell.swift */; };
 		A7D14D64242F4041004E7FF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D14D63242F4041004E7FF3 /* AppDelegate.swift */; };
 		A7D14D66242F4041004E7FF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D14D65242F4041004E7FF3 /* SceneDelegate.swift */; };
 		A7D14D68242F4041004E7FF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D14D67242F4041004E7FF3 /* ViewController.swift */; };
@@ -29,6 +35,12 @@
 		8B60D03F8211F14849329E0B /* Pods_DisturbMeMaybe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DisturbMeMaybe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77590E6242F7168000E9280 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A77590E8242F72BF000E9280 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A77590EC242FE492000E9280 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		A77590EE242FE4FA000E9280 /* AnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementViewController.swift; sourceTree = "<group>"; };
+		A77590F0242FE54C000E9280 /* MakeAnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeAnnouncementViewController.swift; sourceTree = "<group>"; };
+		A77590F2242FE580000E9280 /* UpdateStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStatusViewController.swift; sourceTree = "<group>"; };
+		A77590F4242FEE6C000E9280 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
+		A77590F6242FEEA1000E9280 /* AnnouncementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewCell.swift; sourceTree = "<group>"; };
 		A7D14D60242F4041004E7FF3 /* DisturbMeMaybe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisturbMeMaybe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D14D63242F4041004E7FF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7D14D65242F4041004E7FF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +128,12 @@
 				A7D14D7C242F5B5B004E7FF3 /* InviteViewController.swift */,
 				A7D14D7E242F5B6D004E7FF3 /* ScanViewController.swift */,
 				A77590E8242F72BF000E9280 /* MainViewController.swift */,
+				A77590EC242FE492000E9280 /* StatusViewController.swift */,
+				A77590EE242FE4FA000E9280 /* AnnouncementViewController.swift */,
+				A77590F0242FE54C000E9280 /* MakeAnnouncementViewController.swift */,
+				A77590F2242FE580000E9280 /* UpdateStatusViewController.swift */,
+				A77590F4242FEE6C000E9280 /* StatusTableViewCell.swift */,
+				A77590F6242FEEA1000E9280 /* AnnouncementTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -244,11 +262,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A77590F3242FE580000E9280 /* UpdateStatusViewController.swift in Sources */,
 				A7D14D79242F43F8004E7FF3 /* AuthenticationViewController.swift in Sources */,
 				A7D14D7F242F5B6D004E7FF3 /* ScanViewController.swift in Sources */,
+				A77590F5242FEE6C000E9280 /* StatusTableViewCell.swift in Sources */,
 				A7D14D68242F4041004E7FF3 /* ViewController.swift in Sources */,
 				A7D14D64242F4041004E7FF3 /* AppDelegate.swift in Sources */,
+				A77590EF242FE4FA000E9280 /* AnnouncementViewController.swift in Sources */,
+				A77590ED242FE492000E9280 /* StatusViewController.swift in Sources */,
+				A77590F7242FEEA1000E9280 /* AnnouncementTableViewCell.swift in Sources */,
 				A7D14D7D242F5B5B004E7FF3 /* InviteViewController.swift in Sources */,
+				A77590F1242FE54C000E9280 /* MakeAnnouncementViewController.swift in Sources */,
 				A7D14D7B242F5B35004E7FF3 /* InviteOrJoinViewController.swift in Sources */,
 				A77590E9242F72BF000E9280 /* MainViewController.swift in Sources */,
 				A7D14D66242F4041004E7FF3 /* SceneDelegate.swift in Sources */,
