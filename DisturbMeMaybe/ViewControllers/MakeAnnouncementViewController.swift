@@ -40,6 +40,9 @@ class MakeAnnouncementViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func submitPressed(_ sender: Any) {
         let user = Auth.auth().currentUser
+        var userFamilyID: String?
+        
+        
         if let user = user {
           let currentEmail = user.email
             let usersRef = Database.database().reference(withPath: "users")
@@ -57,6 +60,7 @@ class MakeAnnouncementViewController: UIViewController, UITextViewDelegate {
                 let document = querySnapshot!.documents[0]
                   if let familyID = document.data()["familyID"] as? String
                   {
+                    userFamilyID = familyID
                     // continue with querying familyID for family members
                     db.collection("familyID").whereField("FamilyID", isEqualTo: familyID).getDocuments{ (querySnapshot, error) in
                         if let error = error {
@@ -77,6 +81,7 @@ class MakeAnnouncementViewController: UIViewController, UITextViewDelegate {
                                                 sender.sendPushNotification(to: fcmToken, title: self.announcementTextField.text!, body: self.descriptionTextField.text!)
                                             }
                                         }
+            
                                         
                                     }
                                 }
@@ -93,6 +98,42 @@ class MakeAnnouncementViewController: UIViewController, UITextViewDelegate {
             
            
         // store responses in database
+        let db = Firestore.firestore()
+        var currentAnnouncements = [[String: [String]]]()
+        
+        // get the current announcements
+        db.collection("familyID").whereField("FamilyID", isEqualTo: userFamilyID).getDocuments{ (querySnapshot, error) in
+            if let error = error {
+                print("Error getting documents: \(error)")
+            } else {
+                if querySnapshot!.documents.count != 0 {
+                    // if we have announcements already populated...
+                    if let announcements = querySnapshot!.documents[0].data() as? [[String: [String]]] {
+                        currentAnnouncements = announcements
+                    }
+                }
+            }
+        }
+        
+        // if there was not already announcements inside
+        if currentAnnouncements.count != 0 {
+            currentAnnouncements = [[user?.uid ?? "" : [announcementTextField.text!, descriptionTextField.text!]]]
+        } else {
+            currentAnnouncements.append([user?.uid ?? "" : [announcementTextField.text!, descriptionTextField.text!]])
+        }
+        
+        // update the database
+        db.collection("familyID").document(userFamilyID ?? "").updateData([
+                               "announcements": currentAnnouncements
+                               ]) { (error) in
+                                   
+                               if error != nil {
+                                   // Show error message
+                                   print("error saving data")
+                                }
+        }
+        
+        
         
         // collapse page
         
@@ -103,7 +144,7 @@ class MakeAnnouncementViewController: UIViewController, UITextViewDelegate {
         return false
     }
     
-
+    
     /*
     // MARK: - Navigation
 
