@@ -25,11 +25,14 @@ class AnnouncementViewController: UIViewController, UITableViewDelegate, UITable
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return nameList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "AnnouncementCell") as! AnnouncementTableViewCell
+        cell.announcementHeadLabel.text = titleList[indexPath.row] as! String
+        cell.descriptionLabel.text = titleList[indexPath.row] as! String
+        cell.announcerLabel.text = nameList[indexPath.row] as! String
         return cell
     }
     
@@ -38,6 +41,9 @@ class AnnouncementViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
         query()
     }
     
@@ -74,7 +80,6 @@ class AnnouncementViewController: UIViewController, UITableViewDelegate, UITable
                         {
                             for announcement in announcements {
                                 // need to query the user database for name
-                                print("\n\n\n\n\n\n")
                                 for (uid, announcementInfo) in announcement {
                                     print(uid, announcementInfo)
                                     self.queryUserTable(uid: uid, announcementInfo: announcementInfo)
