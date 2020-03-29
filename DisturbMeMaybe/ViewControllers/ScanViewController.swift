@@ -7,13 +7,24 @@
 //
 
 import UIKit
+import AVFoundation
+import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
-class ScanViewController: UIViewController {
+class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     
     @IBOutlet weak var joinButton: UIButton!
     
     @IBOutlet weak var videoView: UIView!
+    var familyID = String()
+    let db = Firestore.firestore()
+    
+    enum error: Error {
+        case NoCameraAvailable
+        case VideoInputInitFail
+    }
     
     
     @IBAction func joinButtonPressed(_ sender: Any) {
@@ -22,18 +33,75 @@ class ScanViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+        do
+        {
+            try scanQRCode()
+        }
+        catch
+        {
+            print("Could not scan QR code ")
+        }    }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        if metadataObjects.count > 0 {
+            let mechineReadableCode = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+            if mechineReadableCode.type == AVMetadataObject.ObjectType.qr {
+                print(mechineReadableCode.stringValue!)
+                canJoinFamily(familyID: mechineReadableCode.stringValue!)
+            }
+        }
     }
-    */
+    
+    func scanQRCode() throws
+    {
+        let avCaptureSession = AVCaptureSession()
+        guard let avCaptureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
+            print("No camera.")
+            throw error.NoCameraAvailable
+        }
+        
+        guard let avCaptureInput = try? AVCaptureDeviceInput(device: avCaptureDevice) else {
+            print("Failed to init camera.")
+            throw error.VideoInputInitFail
+        }
+        
+        let avCaptureMetadataOutput = AVCaptureMetadataOutput()
+        avCaptureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+        
+        avCaptureSession.addInput(avCaptureInput)
+        avCaptureSession.addOutput(avCaptureMetadataOutput)
+        
+        avCaptureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
+        
+        let avCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: avCaptureSession)
+        
+        avCaptureVideoPreviewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        
+        avCaptureVideoPreviewLayer.frame = videoView.bounds
+        self.videoView.layer.addSublayer(avCaptureVideoPreviewLayer)
+        avCaptureSession.startRunning()
+    }
+    
+    func canJoinFamily(familyID: String)
+    {
+        db.collection("familyID").getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("Error getting documents: \(error)")
+            }
+            else
+            {
+                for document in querySnapshot!.documents
+                {
+                    if document.documentID == familyID
+                    {
+                        self.joinButton.isEnabled = true
+                        break
+                    }
+                    
+                }
+            }
+        }
+    }
 
 }
