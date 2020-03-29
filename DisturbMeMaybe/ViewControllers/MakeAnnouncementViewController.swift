@@ -80,6 +80,47 @@ class MakeAnnouncementViewController: UIViewController, UITextViewDelegate {
                                             if let fcmToken = document.data()["fcmToken"] as? String {
                                                 let sender = NotificationSender()
                                                 sender.sendPushNotification(to: fcmToken, title: self.announcementTextField.text!, body: self.descriptionTextField.text!)
+                                                
+                                                // store responses in database
+                                                      let db = Firestore.firestore()
+                                                      
+                                                      // get the current announcements
+                                                      db.collection("familyID").whereField("FamilyID", isEqualTo: userFamilyID).getDocuments{ (querySnapshot, error) in
+                                                          if let error = error {
+                                                              print("Error getting documents: \(error)")
+                                                          } else {
+                                                            var currentAnnouncements = [[String: [String]]]()
+                                                              if querySnapshot!.documents.count != 0 {
+                                                                  // if we have announcements already populated...
+                                                                  if let announcements = querySnapshot!.documents[0].data()["announcements"] as? [[String: [String]]] {
+                                                                    currentAnnouncements = announcements
+                                                                  }
+                                                              }
+                                                            
+                                                            // if there was not already announcements inside
+                                                            if currentAnnouncements.count == 0 {
+                                                              currentAnnouncements = [[user.uid : [self.announcementTextField.text!, self.descriptionTextField.text!]]]
+                                                            } else {
+                                                              currentAnnouncements.append([user.uid : [self.announcementTextField.text!, self.descriptionTextField.text!]])
+                                                            }
+                                                            
+                                                            // update the database
+                                                            db.collection("familyID").document(userFamilyID ?? "").updateData([
+                                                                                   "announcements": currentAnnouncements
+                                                                                   ]) { (error) in
+                                                                                       
+                                                                                   if error != nil {
+                                                                                       // Show error message
+                                                                                       print("error saving data")
+                                                                                    }
+                                                                    // collapse page
+                                                                                    
+                                                            }
+    
+                                                            
+                                                          }
+                                                      }
+                                                      
                                             }
                                         }
             
@@ -96,47 +137,6 @@ class MakeAnnouncementViewController: UIViewController, UITextViewDelegate {
         }
     
             
-            
-           
-        // store responses in database
-        let db = Firestore.firestore()
-        var currentAnnouncements = [[String: [String]]]()
-        
-        // get the current announcements
-        db.collection("familyID").whereField("FamilyID", isEqualTo: userFamilyID).getDocuments{ (querySnapshot, error) in
-            if let error = error {
-                print("Error getting documents: \(error)")
-            } else {
-                if querySnapshot!.documents.count != 0 {
-                    // if we have announcements already populated...
-                    if let announcements = querySnapshot!.documents[0].data() as? [[String: [String]]] {
-                        currentAnnouncements = announcements
-                    }
-                }
-            }
-        }
-        
-        // if there was not already announcements inside
-        if currentAnnouncements.count != 0 {
-            currentAnnouncements = [[user?.uid ?? "" : [announcementTextField.text!, descriptionTextField.text!]]]
-        } else {
-            currentAnnouncements.append([user?.uid ?? "" : [announcementTextField.text!, descriptionTextField.text!]])
-        }
-        
-        // update the database
-        db.collection("familyID").document(userFamilyID ?? "").updateData([
-                               "announcements": currentAnnouncements
-                               ]) { (error) in
-                                   
-                               if error != nil {
-                                   // Show error message
-                                   print("error saving data")
-                                }
-        }
-        
-        
-        
-        // collapse page
         
     }
     
