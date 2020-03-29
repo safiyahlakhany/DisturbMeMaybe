@@ -253,7 +253,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextPressed:" destination="Nqa-ee-BxX" eventType="touchUpInside" id="6Sj-Sc-RyT"/>
-                                    <segue destination="nwR-zY-rRW" kind="presentation" modalPresentationStyle="fullScreen" id="nGx-Ov-wYE"/>
+                                    <segue destination="nwR-zY-rRW" kind="presentation" identifier="scanDone" modalPresentationStyle="fullScreen" id="nGx-Ov-wYE"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5LX-4R-VSH">
