@@ -232,6 +232,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWK-sx-voh">
                                 <rect key="frame" x="270" y="785" width="64" height="47"/>
+                                <color key="backgroundColor" red="0.78823529410000004" green="0.74117647060000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Kidstar-Regular" family="Kidstar" pointSize="35"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.47843137254901957" green="0.30980392156862746" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -271,6 +272,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Why-ga-5l0">
                                 <rect key="frame" x="263" y="472" width="91" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78823529410000004" green="0.74117647060000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Kidstar-Regular" family="Kidstar" pointSize="35"/>
                                 <state key="normal" title="Enter">
                                     <color key="titleColor" red="0.47843137254901957" green="0.30980392156862746" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -414,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SeR-mC-kio" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4979.7101449275369" y="618.75"/>
+            <point key="canvasLocation" x="5889.8550724637689" y="618.75"/>
         </scene>
         <!--Announcements-->
         <scene sceneID="Vff-IO-viS">
@@ -457,6 +459,11 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.87058823529999996" green="0.79607843140000001" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="announcementHeadLabel" destination="T6l-36-yBc" id="0pt-vt-5vD"/>
+                                    <outlet property="announcerLabel" destination="Ja0-c4-vcq" id="N7C-z2-pEd"/>
+                                    <outlet property="descriptionLabel" destination="Ocn-WK-qut" id="pFC-L9-oIV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -556,7 +563,7 @@
                     <connections>
                         <segue destination="5pK-0h-Eah" kind="relationship" relationship="viewControllers" id="rEC-hH-kYC"/>
                         <segue destination="Bud-Kj-0rX" kind="relationship" relationship="viewControllers" id="Tid-fL-bkn"/>
-                        <segue destination="nx1-uR-0Ti" kind="relationship" relationship="viewControllers" id="b6D-Fj-F26"/>
+                        <segue destination="f7v-c8-r8f" kind="relationship" relationship="viewControllers" id="b6D-Fj-F26"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxz-ia-4ub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -584,7 +591,7 @@
             </objects>
             <point key="canvasLocation" x="4071.0144927536235" y="-90.401785714285708"/>
         </scene>
-        <!--Item-->
+        <!--CustomQR View Controller-->
         <scene sceneID="acB-T9-36V">
             <objects>
                 <viewController id="nx1-uR-0Ti" customClass="CustomQRViewController" customModule="DisturbMeMaybe" customModuleProvider="target" sceneMemberID="viewController">
@@ -599,15 +606,6 @@
                                     <constraint firstAttribute="width" constant="225" id="was-MR-wcZ"/>
                                 </constraints>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jf8-sg-mgq">
-                                <rect key="frame" x="0.0" y="26" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.78823529410000004" green="0.74117647060000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="barTintColor" red="0.78823529410000004" green="0.74117647060000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <items>
-                                    <navigationItem title="Family QR Code" id="Z6c-hl-n2e"/>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your custom QR code!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSb-0a-50p">
                                 <rect key="frame" x="53" y="178" width="308" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -617,20 +615,21 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.87058823529999996" green="0.79607843140000001" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.78823529410000004" green="0.74117647060000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ska-cm-dLd" firstAttribute="centerX" secondItem="N7h-dL-497" secondAttribute="centerX" id="PRY-vp-JZY"/>
                             <constraint firstItem="ska-cm-dLd" firstAttribute="centerY" secondItem="N7h-dL-497" secondAttribute="centerY" id="nFM-ru-khB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xSh-wD-HnA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Zd0-zB-5Oy"/>
+                    <navigationItem key="navigationItem" id="M7E-eC-IrR"/>
                     <connections>
                         <outlet property="QRImageView" destination="ska-cm-dLd" id="ddK-KA-WiG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvp-iG-CdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3208.6956521739135" y="1006.4732142857142"/>
+            <point key="canvasLocation" x="4118.840579710145" y="1006.4732142857142"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="YGh-Uk-JWg">
@@ -641,6 +640,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iZG-xj-NJU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.78823529410000004" green="0.74117647060000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -649,7 +649,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gwm-MR-8ln" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4069.5652173913045" y="618.75"/>
+            <point key="canvasLocation" x="4979.7101449275369" y="618.75"/>
         </scene>
         <!--Update Status View Controller-->
         <scene sceneID="EJE-qb-qyS">
@@ -800,11 +800,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nL5-bC-5rG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6117" y="609"/>
+            <point key="canvasLocation" x="7026.0869565217399" y="608.70535714285711"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="B5l-7W-5Ow">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f7v-c8-r8f" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Zd0-zB-5Oy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rvZ-rj-Iam">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.78823529410000004" green="0.74117647060000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nx1-uR-0Ti" kind="relationship" relationship="rootViewController" id="Ica-vH-vii"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Guf-3d-CIq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3208.6956521739135" y="1006.4732142857142"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xvc-3s-x7J"/>
+        <segue reference="nGx-Ov-wYE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
