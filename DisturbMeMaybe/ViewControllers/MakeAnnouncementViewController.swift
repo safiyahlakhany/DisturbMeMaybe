@@ -46,20 +46,21 @@ class MakeAnnouncementViewController: UIViewController, UITextViewDelegate {
           
             // find all users that have the same user id as the current user
             // use albert for now
-            let familyDb = Firestore.firestore().collection("familyID").document("JHdOJvMAsqSV7P0sFEyCPe8me6n2")
-            /*ref.child("familyID").observeSingleEvent(of: .value, with: { (snapshot) in
-              // Get user value
-              let value = snapshot.value as? [NSDictionary]
-                print(value)
-                
-              //let name = value?["username"] as? String ?? ""
-              //let uid = value?["uid"] as? String ?? ""
-            
-              
-              // ...
-              }) { (error) in
-                print(error.localizedDescription)
+            /*let usersRef = Database.database().reference(withPath: "users")
+            usersRef.queryOrdered(byChild: "uid")
+                    .queryEqual(toValue: "aaa@aaa.com")
+                    .observe(.value, with: { snapshot in
+
+                // if you know that your value will not be nil, then you can unwrap like below
+                //let foo = snapshot.value as! [String: AnyObject]
+
+                if let foo = snapshot.value as? [String: AnyObject] {
+                    let name = foo["name"] as? String
+                    let email = foo["email"] as? String
+                }
+
             }*/
+
             
         
         }

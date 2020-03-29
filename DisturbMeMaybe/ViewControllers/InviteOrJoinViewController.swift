@@ -16,6 +16,8 @@ class InviteOrJoinViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let pushManager = NotificationManager(userID: Firebase.Auth.auth().currentUser?.uid ?? "logged_in_user")
+        pushManager.registerForPushNotifications()
     }
     
     
