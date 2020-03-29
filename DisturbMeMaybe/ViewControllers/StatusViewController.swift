@@ -14,6 +14,10 @@ import FirebaseFirestore
 
 class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+   
+    let redColor = UIColor(red: 254, green: 97, blue: 88, alpha: 1)
+    let orangeColor = UIColor(red: 255, green: 188, blue: 48, alpha: 1)
+    let greenColor = UIColor(red: 37, green: 202, blue: 65, alpha: 1)
     
     
     @IBOutlet var tableView: UITableView!
@@ -39,10 +43,13 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+         let colorArray = [greenColor, orangeColor, redColor]
+        
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "StatusCell") as! StatusTableViewCell
         cell.nameLabel.text = self.familyNames[indexPath.row] as? String
         cell.statusLabel.text = self.familyStatuses[indexPath.row] as? String
-        //cell.availabilityImage.color = self.familyavailability[indexPath.row]
+        
+        cell.availabilityImage.backgroundColor = colorArray[self.familyavailability[indexPath.row] ?? 0 - 1]
         return cell
     }
     

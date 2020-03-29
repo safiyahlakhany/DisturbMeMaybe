@@ -59,7 +59,10 @@
 		A7D14D7C242F5B5B004E7FF3 /* InviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
 		A7D14D7E242F5B6D004E7FF3 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		A7DDC8CD24306279009E81F7 /* CustomQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomQRViewController.swift; sourceTree = "<group>"; };
-		BFCD4A2D2430A3640005F9C9 /* fonts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fonts; path = DisturbMeMaybe/fonts; sourceTree = SOURCE_ROOT; };
+
+		A7DDC8D024309A43009E81F7 /* Kraash.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kraash.ttf; sourceTree = "<group>"; };
+		A7DDC8D124309A4F009E81F7 /* Kraash Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kraash Black.ttf"; sourceTree = "<group>"; };
+		A7DDC8D224309A55009E81F7 /* Kidstar.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kidstar.ttf; sourceTree = "<group>"; };
 		CE4012E2243027960003BCA7 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CE4012E42430286C0003BCA7 /* DisturbMeMaybe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DisturbMeMaybe.entitlements; sourceTree = "<group>"; };
 		CE4012E524302FC10003BCA7 /* NotificationSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSender.swift; sourceTree = "<group>"; };
@@ -115,7 +118,10 @@
 		A7D14D62242F4041004E7FF3 /* DisturbMeMaybe */ = {
 			isa = PBXGroup;
 			children = (
-				BFCD4A2D2430A3640005F9C9 /* fonts */,
+
+      
+				A7DDC8CF243099E3009E81F7 /* Fonts */,
+
 				CE4012E42430286C0003BCA7 /* DisturbMeMaybe.entitlements */,
 				A7D14D80242F6001004E7FF3 /* Helpers */,
 				A7D14D77242F4393004E7FF3 /* ViewControllers */,
@@ -158,6 +164,18 @@
 				CE4012E524302FC10003BCA7 /* NotificationSender.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+
+		A7DDC8CF243099E3009E81F7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A7DDC8D024309A43009E81F7 /* Kraash.ttf */,
+				A7DDC8D124309A4F009E81F7 /* Kraash Black.ttf */,
+				A7DDC8D224309A55009E81F7 /* Kidstar.ttf */,
+			);
+			path = Fonts;
+
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
