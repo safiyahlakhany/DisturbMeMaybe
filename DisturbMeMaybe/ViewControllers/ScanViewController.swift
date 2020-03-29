@@ -10,6 +10,15 @@ import UIKit
 
 class ScanViewController: UIViewController {
 
+    
+    @IBOutlet weak var joinButton: UIButton!
+    
+    @IBOutlet weak var videoView: UIView!
+    
+    
+    @IBAction func joinButtonPressed(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

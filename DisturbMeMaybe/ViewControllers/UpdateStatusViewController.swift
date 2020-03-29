@@ -10,7 +10,12 @@ import UIKit
 
 class UpdateStatusViewController: UIViewController {
 
+    
+    // 1 = green, 2 =  orange, 3 = red
     var availability = 0
+    
+    
+    @IBOutlet weak var updateButton: UIButton!
     
     @IBOutlet weak var statusTextField: UITextField!
     
@@ -60,6 +65,15 @@ class UpdateStatusViewController: UIViewController {
         orangeButton.alpha = 0.25
         availability = 3
         
+    }
+    
+    
+    @IBAction func updateButtonPressed(_ sender: Any)
+    {
+        // Check that status != empty
+        // Check that availability != 0
+        
+        // add to data base
     }
     
     /*

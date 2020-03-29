@@ -82,8 +82,15 @@ class AuthenticationViewController: UIViewController {
 
                     
                     
-                    db.collection("users").document(result!.user.uid ?? "").setData(["name"
-                    :name, "uid": result!.user.uid ]) { (error) in
+
+                    db.collection("users").document(result!.user.uid).setData([
+                        "name":name,
+                        "uid": result!.user.uid,
+                        "availability" : 1,
+                        "status" : "",
+                        "familyID" : ""
+                        ]) { (error) in
+                            
                         if error != nil {
                             // Show error message
                             self.showError("Error saving user data.")

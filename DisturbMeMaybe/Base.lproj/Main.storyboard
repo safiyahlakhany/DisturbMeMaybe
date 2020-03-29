@@ -93,6 +93,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XqS-Wp-Jt1">
+                                <rect key="frame" x="54" y="79" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.85882352941176465" green="0.80000000000000004" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -241,7 +245,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12345678" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3B-Ly-KD6">
-                                <rect key="frame" x="164" y="647" width="79" height="21"/>
+                                <rect key="frame" x="145" y="646" width="150" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -261,6 +265,7 @@
                         <outlet property="nextButton" destination="fWK-sx-voh" id="EWW-4m-O78"/>
                         <outlet property="numberLabel" destination="g3B-Ly-KD6" id="AJ4-TJ-DKk"/>
                         <outlet property="numberTextField" destination="iHg-RT-R6m" id="N6x-Z0-w0s"/>
+                        <outlet property="promptLabel" destination="pib-b9-a6A" id="56Q-fH-9xP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gg-tu-x6u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -275,16 +280,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArA-xg-IbV">
-                                <rect key="frame" x="220" y="602" width="75" height="97"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArA-xg-IbV">
+                                <rect key="frame" x="310" y="765" width="75" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="nwR-zY-rRW" kind="presentation" modalPresentationStyle="fullScreen" id="6du-g5-U9A"/>
+                                    <action selector="joinButtonPressed:" destination="4y3-UG-76g" eventType="touchUpInside" id="yhf-Mm-hmR"/>
+                                    <segue destination="nwR-zY-rRW" kind="presentation" identifier="scanDone" modalPresentationStyle="fullScreen" id="6du-g5-U9A"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2pu-w1-cCE">
+                                <rect key="frame" x="48" y="158" width="318" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhY-hQ-OWs">
-                                <rect key="frame" x="186" y="244" width="39" height="21"/>
+                                <rect key="frame" x="188" y="129" width="39" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -295,6 +306,10 @@
                         <viewLayoutGuide key="safeArea" id="qIP-wl-tKO"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q0X-4w-620"/>
+                    <connections>
+                        <outlet property="joinButton" destination="ArA-xg-IbV" id="jYy-Tk-dRz"/>
+                        <outlet property="videoView" destination="2pu-w1-cCE" id="DMt-ue-4FN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XaS-df-j8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -655,6 +670,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZj-iY-ZcC">
                                 <rect key="frame" x="181.5" y="753" width="51" height="30"/>
                                 <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateButtonPressed:" destination="COy-51-nBx" eventType="touchUpInside" id="g0t-pD-DcX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olN-jy-VHW">
                                 <rect key="frame" x="152" y="75" width="110" height="20.5"/>
@@ -680,15 +698,16 @@
                         <outlet property="orangeButton" destination="BMs-g4-bN7" id="OWU-7A-OXA"/>
                         <outlet property="redButton" destination="WuO-hj-eeB" id="b2a-of-KAa"/>
                         <outlet property="statusTextField" destination="ZAI-Kk-9yU" id="9di-fq-zbm"/>
+                        <outlet property="updateButton" destination="DZj-iY-ZcC" id="HMW-q4-DYu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nL5-bC-5rG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5979.7101449275369" y="618.75"/>
+            <point key="canvasLocation" x="6117" y="609"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xvc-3s-x7J"/>
+        <segue reference="6du-g5-U9A"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
