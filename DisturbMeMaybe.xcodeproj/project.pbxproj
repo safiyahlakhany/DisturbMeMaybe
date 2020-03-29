@@ -26,6 +26,7 @@
 		A7D14D7B242F5B35004E7FF3 /* InviteOrJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D14D7A242F5B35004E7FF3 /* InviteOrJoinViewController.swift */; };
 		A7D14D7D242F5B5B004E7FF3 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D14D7C242F5B5B004E7FF3 /* InviteViewController.swift */; };
 		A7D14D7F242F5B6D004E7FF3 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D14D7E242F5B6D004E7FF3 /* ScanViewController.swift */; };
+		A7DDC8CE24306279009E81F7 /* CustomQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDC8CD24306279009E81F7 /* CustomQRViewController.swift */; };
 		A7E55274F030B590EA7340D9 /* Pods_DisturbMeMaybe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B60D03F8211F14849329E0B /* Pods_DisturbMeMaybe.framework */; };
 		CE4012E3243027960003BCA7 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4012E2243027960003BCA7 /* NotificationManager.swift */; };
 		CE4012E624302FC10003BCA7 /* NotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4012E524302FC10003BCA7 /* NotificationSender.swift */; };
@@ -56,6 +57,7 @@
 		A7D14D7A242F5B35004E7FF3 /* InviteOrJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteOrJoinViewController.swift; sourceTree = "<group>"; };
 		A7D14D7C242F5B5B004E7FF3 /* InviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
 		A7D14D7E242F5B6D004E7FF3 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		A7DDC8CD24306279009E81F7 /* CustomQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomQRViewController.swift; sourceTree = "<group>"; };
 		CE4012E2243027960003BCA7 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CE4012E42430286C0003BCA7 /* DisturbMeMaybe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DisturbMeMaybe.entitlements; sourceTree = "<group>"; };
 		CE4012E524302FC10003BCA7 /* NotificationSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSender.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				A77590F2242FE580000E9280 /* UpdateStatusViewController.swift */,
 				A77590F4242FEE6C000E9280 /* StatusTableViewCell.swift */,
 				A77590F6242FEEA1000E9280 /* AnnouncementTableViewCell.swift */,
+				A7DDC8CD24306279009E81F7 /* CustomQRViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				A77590F7242FEEA1000E9280 /* AnnouncementTableViewCell.swift in Sources */,
 				A7D14D7D242F5B5B004E7FF3 /* InviteViewController.swift in Sources */,
 				A77590F1242FE54C000E9280 /* MakeAnnouncementViewController.swift in Sources */,
+				A7DDC8CE24306279009E81F7 /* CustomQRViewController.swift in Sources */,
 				CE4012E624302FC10003BCA7 /* NotificationSender.swift in Sources */,
 				A7D14D7B242F5B35004E7FF3 /* InviteOrJoinViewController.swift in Sources */,
 				A77590E9242F72BF000E9280 /* MainViewController.swift in Sources */,

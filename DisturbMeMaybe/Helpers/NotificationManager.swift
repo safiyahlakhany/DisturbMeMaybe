@@ -9,7 +9,6 @@
 import Foundation
 import Firebase
 import FirebaseFirestore
-import FirebaseMessaging
 import UIKit
 import UserNotifications
 
