@@ -257,21 +257,21 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5LX-4R-VSH">
-                                <rect key="frame" x="82" y="242" width="250" height="412.5"/>
+                                <rect key="frame" x="82" y="256.5" width="250" height="383"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Phone Numbers to invite others to join" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Keb-gf-TaE">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="122.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="105"/>
                                         <fontDescription key="fontDescription" name="Kidstar-Regular" family="Kidstar" pointSize="35"/>
                                         <color key="textColor" red="0.47843137250000001" green="0.30980392159999998" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="123456789" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iHg-RT-R6m">
-                                        <rect key="frame" x="0.0" y="152.5" width="250" height="34"/>
+                                        <rect key="frame" x="0.0" y="135" width="250" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Why-ga-5l0">
-                                        <rect key="frame" x="0.0" y="216.5" width="250" height="55"/>
+                                        <rect key="frame" x="0.0" y="199" width="250" height="55"/>
                                         <color key="backgroundColor" red="0.78823529410000004" green="0.74117647060000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="DWt-Xf-Tjh"/>
@@ -286,13 +286,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A text message invitation has been sent to" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pib-b9-a6A">
-                                        <rect key="frame" x="0.0" y="301.5" width="250" height="51.5"/>
+                                        <rect key="frame" x="0.0" y="284" width="250" height="44"/>
                                         <fontDescription key="fontDescription" name="Kidstar-Regular" family="Kidstar" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345678" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3B-Ly-KD6">
-                                        <rect key="frame" x="0.0" y="383" width="250" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="358" width="250" height="25"/>
                                         <fontDescription key="fontDescription" name="Kidstar-Regular" family="Kidstar" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -342,7 +342,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArA-xg-IbV">
-                                <rect key="frame" x="288" y="749" width="66" height="53"/>
+                                <rect key="frame" x="304" y="755" width="50" height="47"/>
                                 <color key="backgroundColor" red="0.78823529410000004" green="0.74117647060000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Kidstar-Regular" family="Kidstar" pointSize="35"/>
                                 <state key="normal" title="Join">
@@ -398,16 +398,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="COv-ao-nmr">
-                                            <rect key="frame" x="20" y="11" width="98.5" height="26"/>
+                                            <rect key="frame" x="20" y="11" width="90" height="22"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cns-gf-iUw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="58.5" height="26"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="22"/>
                                                     <fontDescription key="fontDescription" name="Kidstar-Regular" family="Kidstar" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3Qm-Na-hsb">
-                                                    <rect key="frame" x="78.5" y="0.5" width="20" height="25"/>
+                                                    <rect key="frame" x="70" y="0.5" width="20" height="21"/>
                                                 </imageView>
                                             </subviews>
                                         </stackView>
@@ -528,13 +528,13 @@
                                 <rect key="frame" x="82" y="197" width="250" height="369.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make an Announcement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4Z-4S-dAI">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="82"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
                                         <fontDescription key="fontDescription" name="Kidstar-Regular" family="Kidstar" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RHB-O7-Mqd">
-                                        <rect key="frame" x="0.0" y="162" width="250" height="74.5"/>
+                                        <rect key="frame" x="0.0" y="150" width="250" height="92.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Announcement" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JqG-dl-vtn">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="34"/>
@@ -542,7 +542,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iCP-WT-rWX">
-                                                <rect key="frame" x="0.0" y="44" width="250" height="30.5"/>
+                                                <rect key="frame" x="0.0" y="44" width="250" height="48.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -551,7 +551,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Js-ep-N2a">
-                                        <rect key="frame" x="0.0" y="316.5" width="250" height="53"/>
+                                        <rect key="frame" x="0.0" y="322.5" width="250" height="47"/>
                                         <fontDescription key="fontDescription" name="Kidstar-Regular" family="Kidstar" pointSize="35"/>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" red="0.47843137250000001" green="0.30980392159999998" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -641,7 +641,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your custom QR code!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSb-0a-50p">
-                                <rect key="frame" x="53" y="178" width="308" height="41"/>
+                                <rect key="frame" x="53" y="178" width="308" height="35"/>
                                 <fontDescription key="fontDescription" name="Kidstar-Regular" family="Kidstar" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -696,26 +696,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="qeg-2z-FlB">
-                                <rect key="frame" x="57" y="239" width="300" height="364"/>
+                                <rect key="frame" x="57" y="243.5" width="300" height="355"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wjs-lm-14f">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="83.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="79"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write a Custom Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itc-GU-h6B">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="29.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="25"/>
                                                 <fontDescription key="fontDescription" name="Kidstar-Regular" family="Kidstar" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom Status" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZAI-Kk-9yU">
-                                                <rect key="frame" x="0.0" y="49.5" width="300" height="34"/>
+                                                <rect key="frame" x="0.0" y="45" width="300" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qs7-J1-acm">
-                                        <rect key="frame" x="0.0" y="163.5" width="300" height="31"/>
+                                        <rect key="frame" x="0.0" y="159" width="300" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notify Others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVl-gs-JbV">
                                                 <rect key="frame" x="0.0" y="0.0" width="201" height="31"/>
@@ -729,16 +729,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rOT-vb-Ryo">
-                                        <rect key="frame" x="0.0" y="274.5" width="300" height="89.5"/>
+                                        <rect key="frame" x="0.0" y="270" width="300" height="85"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Availablity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yn8-Eu-PJM">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="29.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="25"/>
                                                 <fontDescription key="fontDescription" name="Kidstar-Regular" family="Kidstar" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="105" translatesAutoresizingMaskIntoConstraints="NO" id="8ju-bf-Swy">
-                                                <rect key="frame" x="0.0" y="59.5" width="300" height="30"/>
+                                                <rect key="frame" x="0.0" y="55" width="300" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJy-1e-EkC">
                                                         <rect key="frame" x="0.0" y="0.5" width="30" height="29"/>
@@ -813,7 +813,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olN-jy-VHW">
-                                <rect key="frame" x="94" y="75" width="226" height="41"/>
+                                <rect key="frame" x="109" y="75" width="196" height="35"/>
                                 <fontDescription key="fontDescription" name="Kidstar-Regular" family="Kidstar" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

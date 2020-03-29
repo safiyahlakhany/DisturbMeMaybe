@@ -38,7 +38,7 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.familyUIDs.count
+        return self.familyNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,7 +49,18 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.nameLabel.text = self.familyNames[indexPath.row] as? String
         cell.statusLabel.text = self.familyStatuses[indexPath.row] as? String
         
-        cell.availabilityImage.backgroundColor = colorArray[self.familyavailability[indexPath.row] ?? 0 - 1]
+        //cell.availabilityImage.backgroundColor = colorArray[self.familyavailability[indexPath.row] ?? 0 - 1]
+        let colorVal = self.familyavailability[indexPath.row]
+        if colorVal == 1 {
+            // green
+            cell.availabilityImage.tintColor = UIColor.green
+        } else if colorVal == 2 {
+            // yellow
+            cell.availabilityImage.tintColor = UIColor.yellow
+        } else if colorVal == 3 {
+            // red
+            cell.availabilityImage.tintColor = UIColor.red
+        }
         return cell
     }
     

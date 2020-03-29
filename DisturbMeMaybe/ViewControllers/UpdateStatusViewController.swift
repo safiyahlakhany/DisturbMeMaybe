@@ -85,8 +85,62 @@ class UpdateStatusViewController: UIViewController {
             
             ])
          
+        if notifySwitch.isOn {
+            var userFamilyID: String = ""
+            if let user = user {
+                    let usersRef = Database.database().reference(withPath: "users")
+                    // find all users that have the same user id as the current user
+                    // use albert for now
+                    
+                    let db = Firestore.firestore()
+                    let userID : String = (Auth.auth().currentUser?.uid)!
+                    db.collection("users").whereField("uid", isEqualTo: userID).getDocuments{ (querySnapshot, error) in
+                      if let error = error {
+                        print("Error getting documents: \(error)")
+                      }
+                      else
+                      {
+                        let document = querySnapshot!.documents[0]
+                          if let familyID = document.data()["familyID"] as? String
+                          {
+                            let name = document.data()["name"] as! String
+                            userFamilyID = familyID
+                            // continue with querying familyID for family members
+                            db.collection("familyID").whereField("FamilyID", isEqualTo: familyID).getDocuments{ (querySnapshot, error) in
+                                if let error = error {
+                                    print("Error getting documents: \(error)")
+                                }
+                                else {
+                                    let document = querySnapshot!.documents[0]
+                                    if let familyMembers = document.data()["FamilyMembers"] as? [String] {
+                                        for member in familyMembers {
+                                            
+                                            
+                                            // continue with querying users_table for family members
+                                            db.collection("users_table").whereField("uid", isEqualTo: member).getDocuments{ (querySnapshot, error) in
+                                                if querySnapshot?.documents.count != 0 {
+                                                    let document = querySnapshot!.documents[0]
+                                                    if let fcmToken = document.data()["fcmToken"] as? String {
+                                                        let sender = NotificationSender()
+                                                        sender.sendPushNotification(to: fcmToken, title: "\(name) just updated their status!", body: self.statusTextField.text!)
+                                                        
+                                                
+                                            }
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                          }
+                      }
+                    }
+                }
+                }
+        }
         
         // add to data base
+        }
+        
     }
     
     /*
