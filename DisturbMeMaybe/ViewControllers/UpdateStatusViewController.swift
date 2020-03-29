@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseFirestore
 
 class UpdateStatusViewController: UIViewController {
 
@@ -72,6 +76,15 @@ class UpdateStatusViewController: UIViewController {
     {
         // Check that status != empty
         // Check that availability != 0
+        let db = Firestore.firestore()
+        let user = Auth.auth().currentUser
+        let currentUid = user!.uid
+        db.collection("users").document(currentUid).updateData([
+            "status": statusTextField.text,
+            "availability" : self.availability
+            
+            ])
+         
         
         // add to data base
     }
