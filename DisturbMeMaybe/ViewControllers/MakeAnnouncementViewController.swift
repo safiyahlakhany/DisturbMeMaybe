@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseFirestore
 
-class MakeAnnouncementViewController: UIViewController {
+class MakeAnnouncementViewController: UIViewController, UITextViewDelegate {
 
     
     @IBOutlet weak var announcementTextField: UITextField!
@@ -22,14 +26,53 @@ class MakeAnnouncementViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        descriptionTextField.delegate = self
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     
     @IBAction func submitPressed(_ sender: Any) {
+        let user = Auth.auth().currentUser
+        if let user = user {
+          let currentUid = user.uid
+          let currentEmail = user.email
+          
+            // find all users that have the same user id as the current user
+            // use albert for now
+            let familyDb = Firestore.firestore().collection("familyID").document("JHdOJvMAsqSV7P0sFEyCPe8me6n2")
+            /*ref.child("familyID").observeSingleEvent(of: .value, with: { (snapshot) in
+              // Get user value
+              let value = snapshot.value as? [NSDictionary]
+                print(value)
+                
+              //let name = value?["username"] as? String ?? ""
+              //let uid = value?["uid"] as? String ?? ""
+            
+              
+              // ...
+              }) { (error) in
+                print(error.localizedDescription)
+            }*/
+            
+        
+        }
+        
         // store responses in database
         
         // collapse page
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
 
