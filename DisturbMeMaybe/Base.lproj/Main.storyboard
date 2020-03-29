@@ -159,21 +159,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="1iP-Af-dew">
-                                <rect key="frame" x="129" y="389.5" width="156" height="117"/>
+                                <rect key="frame" x="112" y="382.5" width="190" height="131"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stB-Pe-8vs">
-                                        <rect key="frame" x="0.0" y="0.0" width="156" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Create a Group"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="190" height="48"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
+                                        <state key="normal" title="Create a Group">
+                                            <color key="titleColor" red="0.47843137250000001" green="0.30980392159999998" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="createPressed:" destination="H6g-0L-55s" eventType="touchUpInside" id="aC5-qd-EKG"/>
                                             <segue destination="Nqa-ee-BxX" kind="presentation" modalPresentationStyle="fullScreen" id="bCo-ch-A4j"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5B-Rd-dBs">
-                                        <rect key="frame" x="0.0" y="76" width="156" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Join a Group"/>
+                                        <rect key="frame" x="0.0" y="83" width="190" height="48"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
+                                        <state key="normal" title="Join a Group">
+                                            <color key="titleColor" red="0.47843137250000001" green="0.30980392159999998" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="joinPressed:" destination="H6g-0L-55s" eventType="touchUpInside" id="Zgk-ih-H2P"/>
                                             <segue destination="4y3-UG-76g" kind="presentation" modalPresentationStyle="fullScreen" id="1Wh-Pl-FyP"/>
@@ -203,13 +207,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Numbers to invite family members:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Keb-gf-TaE">
-                                <rect key="frame" x="52" y="272" width="311" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWK-sx-voh">
                                 <rect key="frame" x="285" y="791" width="49" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -228,7 +225,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Why-ga-5l0">
                                 <rect key="frame" x="275" y="476" width="37" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Enter"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" red="0.47843137250000001" green="0.30980392159999998" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="enterPressed:" destination="Nqa-ee-BxX" eventType="touchUpInside" id="GDW-55-IFq"/>
                                 </connections>
@@ -245,6 +244,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Phone Numbers to invite others to join" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Keb-gf-TaE">
+                                <rect key="frame" x="30" y="237" width="337" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="0.47843137250000001" green="0.30980392159999998" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -502,7 +508,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8T-Z5-P9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5979.7101449275369" y="-90.401785714285708"/>
+            <point key="canvasLocation" x="6116" y="-90"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="znv-3b-MPI">
@@ -568,8 +574,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jf8-sg-mgq">
+                                <rect key="frame" x="0.0" y="26" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="Z6c-hl-n2e"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.87051528690000002" green="0.7951569557" blue="0.86275249720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ska-cm-dLd" firstAttribute="centerX" secondItem="N7h-dL-497" secondAttribute="centerX" id="PRY-vp-JZY"/>
                             <constraint firstItem="ska-cm-dLd" firstAttribute="centerY" secondItem="N7h-dL-497" secondAttribute="centerY" id="nFM-ru-khB"/>
@@ -754,7 +767,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xvc-3s-x7J"/>
+        <segue reference="nGx-Ov-wYE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
