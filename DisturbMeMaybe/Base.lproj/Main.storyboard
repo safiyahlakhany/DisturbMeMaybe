@@ -280,20 +280,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArA-xg-IbV">
-                                <rect key="frame" x="310" y="765" width="75" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
-                                <connections>
-                                    <action selector="joinButtonPressed:" destination="4y3-UG-76g" eventType="touchUpInside" id="yhf-Mm-hmR"/>
-                                    <segue destination="nwR-zY-rRW" kind="presentation" identifier="scanDone" modalPresentationStyle="fullScreen" id="6du-g5-U9A"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2pu-w1-cCE">
-                                <rect key="frame" x="48" y="158" width="318" height="618"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhY-hQ-OWs">
                                 <rect key="frame" x="188" y="129" width="39" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -301,8 +287,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pu-w1-cCE">
+                                <rect key="frame" x="48" y="157" width="318" height="582"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="582" id="QQN-rj-66J"/>
+                                    <constraint firstAttribute="width" constant="318" id="ci1-uU-w15"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArA-xg-IbV">
+                                <rect key="frame" x="322" y="772" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="joinButtonPressed:" destination="4y3-UG-76g" eventType="touchUpInside" id="yhf-Mm-hmR"/>
+                                    <segue destination="nwR-zY-rRW" kind="presentation" identifier="scanDone" modalPresentationStyle="fullScreen" id="6du-g5-U9A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qIP-wl-tKO" firstAttribute="trailing" secondItem="ArA-xg-IbV" secondAttribute="trailing" constant="60" id="3l7-Gl-zoW"/>
+                            <constraint firstItem="2pu-w1-cCE" firstAttribute="centerY" secondItem="qGE-AC-rgg" secondAttribute="centerY" id="Ehq-J5-dE8"/>
+                            <constraint firstItem="qIP-wl-tKO" firstAttribute="bottom" secondItem="ArA-xg-IbV" secondAttribute="bottom" constant="60" id="Y65-U9-qA8"/>
+                            <constraint firstItem="2pu-w1-cCE" firstAttribute="centerX" secondItem="qGE-AC-rgg" secondAttribute="centerX" id="b6n-A2-tMu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qIP-wl-tKO"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q0X-4w-620"/>
@@ -513,6 +521,7 @@
                     <connections>
                         <segue destination="5pK-0h-Eah" kind="relationship" relationship="viewControllers" id="rEC-hH-kYC"/>
                         <segue destination="Bud-Kj-0rX" kind="relationship" relationship="viewControllers" id="Tid-fL-bkn"/>
+                        <segue destination="nx1-uR-0Ti" kind="relationship" relationship="viewControllers" id="b6D-Fj-F26"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxz-ia-4ub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -537,6 +546,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQL-Cs-wPm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4071.0144927536235" y="-90.401785714285708"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="acB-T9-36V">
+            <objects>
+                <viewController id="nx1-uR-0Ti" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N7h-dL-497">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ska-cm-dLd">
+                                <rect key="frame" x="94.5" y="335.5" width="225" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="Kwe-md-sD9"/>
+                                    <constraint firstAttribute="width" constant="225" id="was-MR-wcZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your custom QR code!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSb-0a-50p">
+                                <rect key="frame" x="121" y="162" width="172" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ska-cm-dLd" firstAttribute="centerX" secondItem="N7h-dL-497" secondAttribute="centerX" id="PRY-vp-JZY"/>
+                            <constraint firstItem="ska-cm-dLd" firstAttribute="centerY" secondItem="N7h-dL-497" secondAttribute="centerY" id="nFM-ru-khB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xSh-wD-HnA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Zd0-zB-5Oy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xvp-iG-CdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3208.6956521739135" y="1006.4732142857142"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="YGh-Uk-JWg">
