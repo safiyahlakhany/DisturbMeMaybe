@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseMessaging
 import FirebaseDatabase
 import FirebaseFirestore
 

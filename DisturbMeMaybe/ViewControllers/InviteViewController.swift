@@ -56,12 +56,18 @@ class InviteViewController: UIViewController {
     
     
     @IBAction func nextPressed(_ sender: Any) {
-        // store familyID
+        // get familyID
         
-        //var user = Firebase.Auth().currentUser
-        let db = Firestore.firestore()
+//        let db = Firestore.firestore()
+//        let user = Auth.auth().currentUser
+//        let currentUid = user!.uid
 //
-        // db.collection("familyID").document()//.setData()
+//        let docRef = db.collection("familyID").document(currentUid)
+//
+//        if let user = user {
+//            let name = user.value(forKey: "name")
+//        print(name)
+//        }
     }
     
     /*
