@@ -8,10 +8,13 @@
 
 import UIKit
 import Alamofire
-
+import FirebaseAuth
+import Firebase
+import FirebaseFirestore
 
 class InviteViewController: UIViewController {
 
+    
     
     @IBOutlet weak var numberTextField: UITextField!
     
@@ -53,6 +56,12 @@ class InviteViewController: UIViewController {
     
     
     @IBAction func nextPressed(_ sender: Any) {
+        // store familyID
+        
+        //var user = Firebase.Auth().currentUser
+        let db = Firestore.firestore()
+//
+        // db.collection("familyID").document()//.setData()
     }
     
     /*
