@@ -15,9 +15,10 @@ import FirebaseFirestore
 class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     
-    @IBOutlet weak var joinButton: UIButton!
+    @IBOutlet weak var joinButton: WeWantRoundButtons!
     
     @IBOutlet weak var videoView: UIView!
+    
     var familyID = String()
     let db = Firestore.firestore()
     
@@ -26,17 +27,10 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         case VideoInputInitFail
     }
     
-    
+
     @IBAction func joinButtonPressed(_ sender: Any)
     {
-        let db = Firestore.firestore()
-        let user = Auth.auth().currentUser
-        let currentUid = user!.uid
-        db.collection("users").document(currentUid).updateData([
-            "familyID": familyID,
-        ])
         self.performSegue(withIdentifier: "scanDone", sender: self)
-
     }
     
     override func viewDidLoad() {
@@ -51,16 +45,17 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             print("Could not scan QR code ")
         }    }
     
+    
 
    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        if metadataObjects.count > 0 {
-            let mechineReadableCode = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
-            if mechineReadableCode.type == AVMetadataObject.ObjectType.qr {
-                print(mechineReadableCode.stringValue!)
-                canJoinFamily(familyID: mechineReadableCode.stringValue!)
-            }
-        }
-    }
+       if metadataObjects.count > 0 {
+           let mechineReadableCode = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+           if mechineReadableCode.type == AVMetadataObject.ObjectType.qr {
+               print(mechineReadableCode.stringValue!)
+               canJoinFamily(familyID: mechineReadableCode.stringValue!)
+           }
+       }
+   }
     
     func scanQRCode() throws
     {
@@ -90,6 +85,8 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         avCaptureVideoPreviewLayer.frame = videoView.bounds
         self.videoView.layer.addSublayer(avCaptureVideoPreviewLayer)
         avCaptureSession.startRunning()
+        
+        
     }
     
     func canJoinFamily(familyID: String)
@@ -104,8 +101,12 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
                 {
                     if document.documentID == familyID
                     {
+                        let user = Auth.auth().currentUser
+                        let currentUid = user!.uid
+                        self.db.collection("users").document(currentUid).updateData([
+                            "familyID": familyID,
+                        ])
                         self.joinButton.isEnabled = true
-                        break
                     }
                     
                 }
