@@ -79,7 +79,10 @@ class AuthenticationViewController: UIViewController {
                     // User was created successfully
                     let db = Firestore.firestore()
                     
+
                     
+                    
+
                     db.collection("users").document(result!.user.uid).setData([
                         "name":name,
                         "uid": result!.user.uid,
@@ -87,6 +90,7 @@ class AuthenticationViewController: UIViewController {
                         "status" : "",
                         "familyID" : ""
                         ]) { (error) in
+                            
                         if error != nil {
                             // Show error message
                             self.showError("Error saving user data.")

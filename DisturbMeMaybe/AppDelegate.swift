@@ -16,7 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        /*let pushManager = NotificationManager(userID: "currently_logged_in_user_id")
+        pushManager.registerForPushNotifications()*/
+
         FirebaseApp.configure()
+        
+        let sender = NotificationSender()
+        sender.sendPushNotification(to: Messaging.messaging().fcmToken ?? "", title: "Notification title", body: "Notification body")
         
         // Override point for customization after application launch.
         return true
