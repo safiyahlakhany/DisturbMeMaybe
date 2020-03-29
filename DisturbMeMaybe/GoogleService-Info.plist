@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>509752235114-66g71lnsi7c427p3u2g3sh5mflkor1qh.apps.googleusercontent.com</string>
+	<string>509752235114-klec7npd5ci6r51e6k67n4vj4qucrb94.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.509752235114-66g71lnsi7c427p3u2g3sh5mflkor1qh</string>
+	<string>com.googleusercontent.apps.509752235114-klec7npd5ci6r51e6k67n4vj4qucrb94</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDVqZnDlqArrfZq42GIVlHFgWdCBzM-CPM</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>SL.DisturbMeMaybe</string>
+	<string>com.dreamteam.disturbmemaybe</string>
 	<key>PROJECT_ID</key>
 	<string>disturbmemaybe</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:509752235114:ios:40c38bf6965259c505e613</string>
+	<string>1:509752235114:ios:79bdf1d3a6af6d5905e613</string>
 	<key>DATABASE_URL</key>
 	<string>https://disturbmemaybe.firebaseio.com</string>
 </dict>

@@ -43,7 +43,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="250" height="48"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
                                                         <state key="normal" title="Sign Up">
-                                                            <color key="titleColor" red="0.47843137254901957" green="0.30980392156862746" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.47843137250000001" green="0.30980392159999998" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="SignUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vse-sc-kSy"/>
@@ -86,8 +86,15 @@
                                     <segue destination="Lwa-3v-vMF" kind="show" id="hTo-cE-bxz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logo Here!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJO-sC-21c">
+                                <rect key="frame" x="163" y="197" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.78823529411764703" green="0.74117647058823533" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.80000000000000004" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="wYy-dB-FJt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FhC-L2-jTa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L4H-uW-qHb" secondAttribute="trailing" constant="35" id="GEy-Ue-7sr"/>
@@ -656,7 +663,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.78823529410000004" green="0.74117647060000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.80000000000000004" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="b6C-Gp-HBc" firstAttribute="bottom" secondItem="DZj-iY-ZcC" secondAttribute="bottom" constant="25" id="72h-Ix-hzx"/>
                             <constraint firstItem="qeg-2z-FlB" firstAttribute="centerY" secondItem="Q2U-4i-Keg" secondAttribute="centerY" id="9t2-JP-Ic3"/>

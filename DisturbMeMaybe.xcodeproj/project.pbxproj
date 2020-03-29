@@ -15,6 +15,7 @@
 		A77590F3242FE580000E9280 /* UpdateStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77590F2242FE580000E9280 /* UpdateStatusViewController.swift */; };
 		A77590F5242FEE6C000E9280 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77590F4242FEE6C000E9280 /* StatusTableViewCell.swift */; };
 		A77590F7242FEEA1000E9280 /* AnnouncementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77590F6242FEEA1000E9280 /* AnnouncementTableViewCell.swift */; };
+		A77590F924301BC5000E9280 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A77590F824301BC5000E9280 /* GoogleService-Info.plist */; };
 		A7D14D64242F4041004E7FF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D14D63242F4041004E7FF3 /* AppDelegate.swift */; };
 		A7D14D66242F4041004E7FF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D14D65242F4041004E7FF3 /* SceneDelegate.swift */; };
 		A7D14D68242F4041004E7FF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D14D67242F4041004E7FF3 /* ViewController.swift */; };
@@ -25,7 +26,6 @@
 		A7D14D7B242F5B35004E7FF3 /* InviteOrJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D14D7A242F5B35004E7FF3 /* InviteOrJoinViewController.swift */; };
 		A7D14D7D242F5B5B004E7FF3 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D14D7C242F5B5B004E7FF3 /* InviteViewController.swift */; };
 		A7D14D7F242F5B6D004E7FF3 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D14D7E242F5B6D004E7FF3 /* ScanViewController.swift */; };
-		A7D14D82242F6490004E7FF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7D14D81242F648F004E7FF3 /* GoogleService-Info.plist */; };
 		A7E55274F030B590EA7340D9 /* Pods_DisturbMeMaybe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B60D03F8211F14849329E0B /* Pods_DisturbMeMaybe.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +41,7 @@
 		A77590F2242FE580000E9280 /* UpdateStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStatusViewController.swift; sourceTree = "<group>"; };
 		A77590F4242FEE6C000E9280 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
 		A77590F6242FEEA1000E9280 /* AnnouncementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewCell.swift; sourceTree = "<group>"; };
+		A77590F824301BC5000E9280 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A7D14D60242F4041004E7FF3 /* DisturbMeMaybe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisturbMeMaybe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D14D63242F4041004E7FF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7D14D65242F4041004E7FF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		A7D14D7A242F5B35004E7FF3 /* InviteOrJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteOrJoinViewController.swift; sourceTree = "<group>"; };
 		A7D14D7C242F5B5B004E7FF3 /* InviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
 		A7D14D7E242F5B6D004E7FF3 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
-		A7D14D81242F648F004E7FF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +113,8 @@
 				A7D14D67242F4041004E7FF3 /* ViewController.swift */,
 				A7D14D69242F4041004E7FF3 /* Main.storyboard */,
 				A7D14D6C242F404A004E7FF3 /* Assets.xcassets */,
+				A77590F824301BC5000E9280 /* GoogleService-Info.plist */,
 				A7D14D6E242F404A004E7FF3 /* LaunchScreen.storyboard */,
-				A7D14D81242F648F004E7FF3 /* GoogleService-Info.plist */,
 				A7D14D71242F404A004E7FF3 /* Info.plist */,
 			);
 			path = DisturbMeMaybe;
@@ -207,7 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7D14D70242F404A004E7FF3 /* LaunchScreen.storyboard in Resources */,
-				A7D14D82242F6490004E7FF3 /* GoogleService-Info.plist in Resources */,
+				A77590F924301BC5000E9280 /* GoogleService-Info.plist in Resources */,
 				A7D14D6D242F404A004E7FF3 /* Assets.xcassets in Resources */,
 				A7D14D6B242F4041004E7FF3 /* Main.storyboard in Resources */,
 			);
@@ -428,7 +428,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SL.DisturbMeMaybe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreamteam.disturbmemaybe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -447,7 +447,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SL.DisturbMeMaybe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreamteam.disturbmemaybe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
