@@ -41,34 +41,102 @@ class MakeAnnouncementViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func submitPressed(_ sender: Any) {
         let user = Auth.auth().currentUser
+        var userFamilyID: String?
+        
+        
         if let user = user {
-          let currentUid = user.uid
           let currentEmail = user.email
-          
+            let usersRef = Database.database().reference(withPath: "users")
             // find all users that have the same user id as the current user
             // use albert for now
-            /*let usersRef = Database.database().reference(withPath: "users")
-            usersRef.queryOrdered(byChild: "uid")
-                    .queryEqual(toValue: "aaa@aaa.com")
-                    .observe(.value, with: { snapshot in
-
-                // if you know that your value will not be nil, then you can unwrap like below
-                //let foo = snapshot.value as! [String: AnyObject]
-
-                if let foo = snapshot.value as? [String: AnyObject] {
-                    let name = foo["name"] as? String
-                    let email = foo["email"] as? String
-                }
-
-            }*/
-
             
-        
+            let db = Firestore.firestore()
+            let userID : String = (Auth.auth().currentUser?.uid)!
+            db.collection("users").whereField("uid", isEqualTo: userID).getDocuments{ (querySnapshot, error) in
+              if let error = error {
+                print("Error getting documents: \(error)")
+              }
+              else
+              {
+                let document = querySnapshot!.documents[0]
+                  if let familyID = document.data()["familyID"] as? String
+                  {
+                    userFamilyID = familyID
+                    // continue with querying familyID for family members
+                    db.collection("familyID").whereField("FamilyID", isEqualTo: familyID).getDocuments{ (querySnapshot, error) in
+                        if let error = error {
+                            print("Error getting documents: \(error)")
+                        }
+                        else {
+                            let document = querySnapshot!.documents[0]
+                            if let familyMembers = document.data()["FamilyMembers"] as? [String] {
+                                for member in familyMembers {
+                                    
+                                    
+                                    // continue with querying users_table for family members
+                                    db.collection("users_table").whereField("uid", isEqualTo: member).getDocuments{ (querySnapshot, error) in
+                                        if querySnapshot?.documents.count != 0 {
+                                            let document = querySnapshot!.documents[0]
+                                            if let fcmToken = document.data()["fcmToken"] as? String {
+                                                let sender = NotificationSender()
+                                                sender.sendPushNotification(to: fcmToken, title: self.announcementTextField.text!, body: self.descriptionTextField.text!)
+                                                
+                                                // store responses in database
+                                                      let db = Firestore.firestore()
+                                                      
+                                                      // get the current announcements
+                                                      db.collection("familyID").whereField("FamilyID", isEqualTo: userFamilyID).getDocuments{ (querySnapshot, error) in
+                                                          if let error = error {
+                                                              print("Error getting documents: \(error)")
+                                                          } else {
+                                                            var currentAnnouncements = [[String: [String]]]()
+                                                              if querySnapshot!.documents.count != 0 {
+                                                                  // if we have announcements already populated...
+                                                                  if let announcements = querySnapshot!.documents[0].data()["announcements"] as? [[String: [String]]] {
+                                                                    currentAnnouncements = announcements
+                                                                  }
+                                                              }
+                                                            
+                                                            // if there was not already announcements inside
+                                                            if currentAnnouncements.count == 0 {
+                                                              currentAnnouncements = [[user.uid : [self.announcementTextField.text!, self.descriptionTextField.text!]]]
+                                                            } else {
+                                                              currentAnnouncements.append([user.uid : [self.announcementTextField.text!, self.descriptionTextField.text!]])
+                                                            }
+                                                            
+                                                            // update the database
+                                                            db.collection("familyID").document(userFamilyID ?? "").updateData([
+                                                                                   "announcements": currentAnnouncements
+                                                                                   ]) { (error) in
+                                                                                       
+                                                                                   if error != nil {
+                                                                                       // Show error message
+                                                                                       print("error saving data")
+                                                                                    }
+                                                                    // collapse page
+                                                                                    
+                                                            }
+    
+                                                            
+                                                          }
+                                                      }
+                                                      
+                                            }
+                                        }
+            
+                                        
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                  }
+              }
+            }
         }
-        
-        // store responses in database
-        
-        // collapse page
+    
+            
         
     }
     
@@ -77,7 +145,7 @@ class MakeAnnouncementViewController: UIViewController, UITextViewDelegate {
         return false
     }
     
-
+    
     /*
     // MARK: - Navigation
 
