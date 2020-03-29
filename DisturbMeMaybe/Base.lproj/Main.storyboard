@@ -198,7 +198,7 @@
                                         </state>
                                         <connections>
                                             <action selector="createPressed:" destination="H6g-0L-55s" eventType="touchUpInside" id="aC5-qd-EKG"/>
-                                            <segue destination="Nqa-ee-BxX" kind="presentation" modalPresentationStyle="fullScreen" id="bCo-ch-A4j"/>
+                                            <segue destination="Nqa-ee-BxX" kind="presentation" identifier="createIdentifier" modalPresentationStyle="fullScreen" id="bCo-ch-A4j"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5B-Rd-dBs">
@@ -213,7 +213,7 @@
                                         </state>
                                         <connections>
                                             <action selector="joinPressed:" destination="H6g-0L-55s" eventType="touchUpInside" id="Zgk-ih-H2P"/>
-                                            <segue destination="4y3-UG-76g" kind="presentation" modalPresentationStyle="fullScreen" id="1Wh-Pl-FyP"/>
+                                            <segue destination="4y3-UG-76g" kind="presentation" identifier="joinIdentifier" modalPresentationStyle="fullScreen" id="1Wh-Pl-FyP"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -253,7 +253,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextPressed:" destination="Nqa-ee-BxX" eventType="touchUpInside" id="6Sj-Sc-RyT"/>
-                                    <segue destination="nwR-zY-rRW" kind="presentation" modalPresentationStyle="fullScreen" id="nGx-Ov-wYE"/>
+                                    <segue destination="nwR-zY-rRW" kind="presentation" identifier="mainIdentifier" modalPresentationStyle="fullScreen" id="nGx-Ov-wYE"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5LX-4R-VSH">
@@ -873,7 +873,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nGx-Ov-wYE"/>
+        <segue reference="6du-g5-U9A"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="2048" height="2048"/>

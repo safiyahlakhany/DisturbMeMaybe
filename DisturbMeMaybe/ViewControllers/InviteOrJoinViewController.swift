@@ -21,13 +21,15 @@ class InviteOrJoinViewController: UIViewController {
     }
     
     
-    @IBAction func createPressed(_ sender: Any) {
-        
+    @IBAction func createPressed(_ sender: Any)
+    {
+        self.performSegue(withIdentifier: "createIdentifier", sender: self)
     }
     
     
     @IBAction func joinPressed(_ sender: Any) {
         print(Firebase.Auth.auth().currentUser?.uid)
+        self.performSegue(withIdentifier: "joinIdentifier", sender: self)
     }
     
     

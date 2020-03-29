@@ -35,6 +35,8 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         db.collection("users").document(currentUid).updateData([
             "familyID": familyID,
         ])
+        self.performSegue(withIdentifier: "scanDone", sender: self)
+
     }
     
     override func viewDidLoad() {
