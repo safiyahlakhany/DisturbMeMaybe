@@ -29,10 +29,12 @@ class InviteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateFamily()
         self.numberLabel.text = ""
         self.promptLabel.alpha = 0
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        
     }
     
     @objc func dismissKeyboard() {
@@ -45,9 +47,21 @@ class InviteViewController: UIViewController {
         return false
     }
     
+    func updateFamily()
+    {
+        let db = Firestore.firestore()
+        let user = Auth.auth().currentUser
+        let currentUid = user!.uid
+        db.collection("users").document(currentUid).updateData([
+            "familyID": currentUid,
+            ])
+    }
+    
     @IBAction func enterPressed(_ sender: Any) {
         
         let num = "+1" + (numberTextField.text!)
+        print("\n\n\n\n\n")
+        print(numberTextField.text!)
         let url = Constants.TwilioStuff.url
         let messageText = "Join your family quarantine together! Download the app here: http://www.appstore.com"
         let parameters = ["From": Constants.TwilioStuff.fromNumber, "To": num, "Body": messageText]
@@ -58,7 +72,7 @@ class InviteViewController: UIViewController {
          .responseJSON { response in
           debugPrint(response)
         }
-        self.numberLabel.text = numberTextField.text!
+        self.numberLabel.text = "A text message invitation has been sent to " + numberTextField.text!
         self.promptLabel.alpha = 0
         self.numberTextField.text = ""
         

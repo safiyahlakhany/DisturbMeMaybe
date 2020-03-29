@@ -27,7 +27,14 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     }
     
     
-    @IBAction func joinButtonPressed(_ sender: Any) {
+    @IBAction func joinButtonPressed(_ sender: Any)
+    {
+        let db = Firestore.firestore()
+        let user = Auth.auth().currentUser
+        let currentUid = user!.uid
+        db.collection("users").document(currentUid).updateData([
+            "familyID": familyID,
+        ])
     }
     
     override func viewDidLoad() {
