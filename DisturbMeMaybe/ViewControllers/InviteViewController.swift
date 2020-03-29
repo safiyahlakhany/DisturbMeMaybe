@@ -70,8 +70,8 @@ class InviteViewController: UIViewController {
             
   
             
-            AF.request(url, method: .post,  parameters: parameters)
-                .authenticate(username: Constants.TwilioStuff.username, password: Constants.TwilioStuff.password)
+            Alamofire.request(url, method: .post,  parameters: parameters)
+                .authenticate(user: Constants.TwilioStuff.username, password: Constants.TwilioStuff.password)
          .responseJSON { response in
           debugPrint(response)
         }
