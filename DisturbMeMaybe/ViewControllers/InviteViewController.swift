@@ -55,6 +55,8 @@ class InviteViewController: UIViewController {
         db.collection("users").document(currentUid).updateData([
             "familyID": currentUid,
             ])
+        self.performSegue(withIdentifier: "scanDone", sender: self)
+
     }
     
     @IBAction func enterPressed(_ sender: Any) {
