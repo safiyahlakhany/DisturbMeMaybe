@@ -85,6 +85,7 @@ class UpdateStatusViewController: UIViewController {
             
             ])
          
+        self.dismiss(animated: true, completion: nil)
         
         // add to data base
     }

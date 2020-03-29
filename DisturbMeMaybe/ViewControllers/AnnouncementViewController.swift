@@ -45,6 +45,8 @@ class AnnouncementViewController: UIViewController, UITableViewDelegate, UITable
         self.tableView.dataSource = self
         
         query()
+        
+        self.tableView.reloadData()
     }
     
     func query() {
