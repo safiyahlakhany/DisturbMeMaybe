@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class InviteViewController: UIViewController {
 
@@ -20,14 +22,33 @@ class InviteViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBOutlet weak var promptLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.numberLabel.text = ""
+        self.promptLabel.alpha = 0
         // Do any additional setup after loading the view.
     }
     
     
     @IBAction func enterPressed(_ sender: Any) {
+        
+        let num = "+1" + (numberTextField.text!)
+        let url = Constants.TwilioStuff.url
+        let messageText = "Join your family quarantine together! Download the app here: http://www.appstore.com"
+        let parameters = ["From": Constants.TwilioStuff.fromNumber, "To": num, "Body": messageText]
+            
+  
+        AF.request(url, method: .post,  parameters: parameters)
+                .authenticate(username: Constants.TwilioStuff.username, password: Constants.TwilioStuff.password)
+         .responseJSON { response in
+          debugPrint(response)
+        }
+        self.numberLabel.text = numberTextField.text!
+        self.promptLabel.alpha = 0
+        self.numberTextField.text = ""
+        
     }
     
     
