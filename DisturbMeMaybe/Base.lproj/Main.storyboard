@@ -374,11 +374,8 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArA-xg-IbV" customClass="WeWantRoundButtons" customModule="DisturbMeMaybe" customModuleProvider="target">
-                                <rect key="frame" x="289" y="749" width="65" height="53"/>
+                                <rect key="frame" x="318" y="789" width="66" height="53"/>
                                 <color key="backgroundColor" red="0.78823529410000004" green="0.74117647060000003" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="Zof-Qy-da9"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Kidstar-Regular" family="Kidstar" pointSize="35"/>
                                 <state key="normal" title="Join">
                                     <color key="titleColor" red="0.47843137250000001" green="0.30980392159999998" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -403,10 +400,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.87051528690000002" green="0.7951569557" blue="0.86275249720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="qIP-wl-tKO" firstAttribute="trailing" secondItem="ArA-xg-IbV" secondAttribute="trailing" constant="60" id="3l7-Gl-zoW"/>
+                            <constraint firstItem="qIP-wl-tKO" firstAttribute="trailing" secondItem="ArA-xg-IbV" secondAttribute="trailing" constant="30" id="6cb-yA-Ljh"/>
                             <constraint firstItem="2pu-w1-cCE" firstAttribute="centerY" secondItem="qGE-AC-rgg" secondAttribute="centerY" id="Ehq-J5-dE8"/>
-                            <constraint firstItem="qIP-wl-tKO" firstAttribute="bottom" secondItem="ArA-xg-IbV" secondAttribute="bottom" constant="60" id="Y65-U9-qA8"/>
                             <constraint firstItem="2pu-w1-cCE" firstAttribute="centerX" secondItem="qGE-AC-rgg" secondAttribute="centerX" id="b6n-A2-tMu"/>
+                            <constraint firstItem="qIP-wl-tKO" firstAttribute="bottom" secondItem="ArA-xg-IbV" secondAttribute="bottom" constant="20" id="kX8-kZ-3Ap"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qIP-wl-tKO"/>
                     </view>
