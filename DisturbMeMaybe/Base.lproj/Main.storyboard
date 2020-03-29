@@ -655,6 +655,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZj-iY-ZcC">
                                 <rect key="frame" x="181.5" y="753" width="51" height="30"/>
                                 <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateButtonPressed:" destination="COy-51-nBx" eventType="touchUpInside" id="g0t-pD-DcX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olN-jy-VHW">
                                 <rect key="frame" x="152" y="75" width="110" height="20.5"/>
@@ -680,11 +683,12 @@
                         <outlet property="orangeButton" destination="BMs-g4-bN7" id="OWU-7A-OXA"/>
                         <outlet property="redButton" destination="WuO-hj-eeB" id="b2a-of-KAa"/>
                         <outlet property="statusTextField" destination="ZAI-Kk-9yU" id="9di-fq-zbm"/>
+                        <outlet property="updateButton" destination="DZj-iY-ZcC" id="HMW-q4-DYu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nL5-bC-5rG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5979.7101449275369" y="618.75"/>
+            <point key="canvasLocation" x="6117" y="609"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
