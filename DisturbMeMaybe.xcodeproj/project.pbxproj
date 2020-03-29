@@ -28,6 +28,7 @@
 		A7D14D7F242F5B6D004E7FF3 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D14D7E242F5B6D004E7FF3 /* ScanViewController.swift */; };
 		A7DDC8CE24306279009E81F7 /* CustomQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDC8CD24306279009E81F7 /* CustomQRViewController.swift */; };
 		A7E55274F030B590EA7340D9 /* Pods_DisturbMeMaybe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B60D03F8211F14849329E0B /* Pods_DisturbMeMaybe.framework */; };
+		BFCD4A2E2430A3640005F9C9 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = BFCD4A2D2430A3640005F9C9 /* fonts */; };
 		CE4012E3243027960003BCA7 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4012E2243027960003BCA7 /* NotificationManager.swift */; };
 		CE4012E624302FC10003BCA7 /* NotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4012E524302FC10003BCA7 /* NotificationSender.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		A7D14D7C242F5B5B004E7FF3 /* InviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
 		A7D14D7E242F5B6D004E7FF3 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		A7DDC8CD24306279009E81F7 /* CustomQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomQRViewController.swift; sourceTree = "<group>"; };
+		BFCD4A2D2430A3640005F9C9 /* fonts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fonts; path = DisturbMeMaybe/fonts; sourceTree = SOURCE_ROOT; };
 		CE4012E2243027960003BCA7 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CE4012E42430286C0003BCA7 /* DisturbMeMaybe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DisturbMeMaybe.entitlements; sourceTree = "<group>"; };
 		CE4012E524302FC10003BCA7 /* NotificationSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSender.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		A7D14D62242F4041004E7FF3 /* DisturbMeMaybe */ = {
 			isa = PBXGroup;
 			children = (
+				BFCD4A2D2430A3640005F9C9 /* fonts */,
 				CE4012E42430286C0003BCA7 /* DisturbMeMaybe.entitlements */,
 				A7D14D80242F6001004E7FF3 /* Helpers */,
 				A7D14D77242F4393004E7FF3 /* ViewControllers */,
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7D14D70242F404A004E7FF3 /* LaunchScreen.storyboard in Resources */,
+				BFCD4A2E2430A3640005F9C9 /* fonts in Resources */,
 				A77590FB2430232E000E9280 /* GoogleService-Info.plist in Resources */,
 				A7D14D6D242F404A004E7FF3 /* Assets.xcassets in Resources */,
 				A7D14D6B242F4041004E7FF3 /* Main.storyboard in Resources */,
