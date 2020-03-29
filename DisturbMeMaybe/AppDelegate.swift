@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         FirebaseApp.configure()
         
-        let sender = NotificationSender()
-        sender.sendPushNotification(to: Messaging.messaging().fcmToken ?? "", title: "Notification title", body: "Notification body")
+//        let sender = NotificationSender()
+//        sender.sendPushNotification(to: Messaging.messaging().fcmToken ?? "", title: "Notification title", body: "Notification body")
         
         // Override point for customization after application launch.
         return true
