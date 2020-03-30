@@ -9,6 +9,10 @@ Being quarantined in your house, with your family, 24/7, after living alone at c
 ## What it does
 That is why we bring to you: Disturb Me Maybe! Distub Me Maybe is an iOS app where families are given a unique QR code and members can join the family by scanning that code. Once they join their family "room", users can update their status (i.e. in a meeting, doing homework, etc.). With the status, users can set their availability option (available, partially available, do not disturb). Each household member can see their family's statuses, so they know when to not disturb them or when they can (maybe)! As well as that, family members can make announcements, in which all family members get push notifications about that announcement. When creating a family group, users can send an invite link for members to join, which is sent through SMS using the Twilio API.
 
+<img src='http://g.recordit.co/LWN2EBsbkd.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/Cp1pWyqiHA.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
 ## How we built it
 Swift, Firebase, Twilio API, Alamofire, AVFoundation framework, Core Image framework
 
