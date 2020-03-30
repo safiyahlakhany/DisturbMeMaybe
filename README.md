@@ -20,7 +20,7 @@ Swift, Firebase, Twilio API, Alamofire, AVFoundation framework, Core Image frame
 One primary challenge we ran into was not being able to be with each other physically (LaHacks 2020 was a virtual hackathon), especially since we had a QR code scanner involved. However, we learned a lot from that, such as collaborating using Github and debugging through screen sharing. Another challenge we faced was that querying from Firebase was not as easy as it seemed, and delayed us by a lot. As well as that, sending push notifications to users required a certificate that was extremely complicated to get working. Through all of this, however, we truly learned to be patient and determined.
 
 ## Accomplishments that we're proud of
-The app is able to scan QR codes for users to join a family. The app is also able to send notifications to each family group regarding announcements and status updates. The app also utilizes a fully-functioning Firestore database on Firebase that we created ourselves!
+The app is able to scan QR codes for users to join a family. The app is also able to send notifications to each family group regarding announcements and status updates and it utilizes a fully-functioning Firestore database on Firebase!
 
 ## What we learned
 We weren't very familiar with Firebase before we started and we learned a lot about updating and querying from the database. We also learned how to implement QR codes in Swift. Additionally, we learned about sending push notifications.
