@@ -37,7 +37,7 @@ We want to sync up Google Calendar with our status feature so that there are aut
 
 [Safiyah Lakhany](https://github.com/safiyahlakhany)
 
-
+## Links
 Demo: https://www.youtube.com/watch?v=M1XPj1_sVsk
 
 Devpost: https://devpost.com/software/disturbmemaybe
