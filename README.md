@@ -28,6 +28,16 @@ We weren't very familiar with Firebase before we started and we learned a lot ab
 ## What's next for DisturbMeMaybe
 We want to sync up Google Calendar with our status feature so that there are automatic statuses based on a user's personal calendar. We also want to utilize machine learning to determine the availability of that status.
 
+## Contributors
+[Lenah Syed](https://github.com/123lenah)
+
+[Iqra Abbaali](https://github.com/iabbaali)
+
+[Saadia Karim](https://github.com/saadiak)
+
+[Safiyah Lakhany](https://github.com/safiyahlakhany)
+
+
 Demo: https://www.youtube.com/watch?v=M1XPj1_sVsk
 
 Devpost: https://devpost.com/software/disturbmemaybe
