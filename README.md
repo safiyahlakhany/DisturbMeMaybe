@@ -23,7 +23,7 @@ One primary challenge we ran into was not being able to be with each other physi
 The app is able to scan QR codes for users to join a family. The app is also able to send notifications to each family group regarding announcements and status updates and it utilizes a fully-functioning Firestore database on Firebase!
 
 ## What we learned
-We weren't very familiar with Firebase before we started and we learned a lot about updating and querying from the database. We also learned how to implement QR codes in Swift. Additionally, we learned about sending push notifications.
+We weren't too familiar with Firebase before we started and we learned a lot about updating and querying from the database. We also learned how to implement QR codes in Swift. Additionally, we learned about sending push notifications.
 
 ## What's next for DisturbMeMaybe
 We want to sync up Google Calendar with our status feature so that there are automatic statuses based on a user's personal calendar. We also want to utilize machine learning to determine the availability of that status.
